@@ -23,49 +23,42 @@ git clone ${repos[$team_name]} ./ref_repo
 folder2="diff"
 mkdir $folder2
 
-diff 001.out ./ref_repo/001.out > ./$folder2/dif_001.txt
-diff 002.out ./ref_repo/002.out > ./$folder2/dif_002.txt
-diff 003.out ./ref_repo/003.out > ./$folder2/dif_003.txt
-diff 004.out ./ref_repo/004.out > ./$folder2/dif_004.txt
-diff 005.out ./ref_repo/005.out > ./$folder2/dif_005.txt
-diff 006.out ./ref_repo/006.out > ./$folder2/dif_006.txt
-
-$(diff 001.out ./ref_repo/001.out)
+$(diff 001.out ./ref_repo/001.out > ./$folder2/dif_001.txt)
 if [ $? -eq 0 ]
       then 
           echo "Los archivos 001 son iguales!"
       else
           echo "Los archivos 001 son diferentes!"
       fi
-$(diff 002.out ./ref_repo/002.out)
+$(diff 002.out ./ref_repo/002.out > ./$folder2/dif_002.txt)
 if [ $? -eq 0 ]
       then 
           echo "Los archivos 002 son iguales!"
       else
           echo "Los archivos 002 son diferentes!"
       fi
-$(diff 003.out ./ref_repo/003.out)
+$(diff 003.out ./ref_repo/003.out > ./$folder2/dif_003.txt)
 if [ $? -eq 0 ]
       then 
           echo "Los archivos 003 son iguales!"
       else
           echo "Los archivos 003 son diferentes!"
       fi
-$(diff 004.out ./ref_repo/004.out)
+$(diff 004.out ./ref_repo/004.out > ./$folder2/dif_004.txt)
 if [ $? -eq 0 ]
       then 
           echo "Los archivos 004 son iguales!"
       else
           echo "Los archivos 004 son diferentes!"
       fi
-$(diff 005.out ./ref_repo/005.out)
+$(diff 005.out ./ref_repo/005.out > ./$folder2/dif_005.txt)
 if [ $? -eq 0 ]
       then 
           echo "Los archivos 005 son iguales!"
       else
           echo "Los archivos 005 son diferentes!"
       fi
-$(diff 006.out ./ref_repo/006.out)
+$(diff 006.out ./ref_repo/006.out > ./$folder2/dif_006.txt)
 if [ $? -eq 0 ]
       then 
           echo "Los archivos 006 son iguales!"
